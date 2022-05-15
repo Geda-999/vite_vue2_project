@@ -1,4 +1,4 @@
-# Vue 2 + Vite + Element-UI
+# Vue 2 + Vite + Element-UI + tailwindcss2
 
 This template should help get you started developing with Vue 2 in Vite.
 
