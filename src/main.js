@@ -13,6 +13,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue'
 import router from './router'
 
+// 导入tailwind
+import "./tailwind.css";
+
 Vue.config.productionTip = false
 
 // 全局引入element-ui
