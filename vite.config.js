@@ -8,7 +8,7 @@ import AutoImport from "unplugin-auto-import/vite";
 // 自动按需引入 第三方的组件库组件 和 我们自定义的组件
 import Components from "unplugin-vue-components/vite";
 
-// import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { ElementUiResolver } from "unplugin-vue-components/resolvers";
 // import { AntDesignVueResolver } from "unplugin-vue-components/resolvers";
 
 // 自动按需引入 我们手动引入的组件的css样式
@@ -31,7 +31,7 @@ export default {
 			// 甚至你还可以使用自定义的配置规则，见 https://github.com/antfu/unplugin-auto-import#configuration
 			import: ["vue", "vue-router"],
 			// 第三方组件库的解析器
-			// resolvers: [ElementPlusResolver()],
+			resolvers: [ElementUiResolver()],
 			dts: "./src/auto-imports.d.ts",
 
 			// Generate corresponding .eslintrc-auto-import.json file.
@@ -50,9 +50,10 @@ export default {
 			extensions: ["vue", "md"],
 			// 解析的 UI 组件库，这里以 Element Plus 和 Ant Design Vue 为例
 			// resolvers: [ElementPlusResolver(), AntDesignVueResolver()],
+			resolvers: [ElementUiResolver(), IconsResolver()],
 
 			// 是一个非常优秀的图标库
-			resolvers: IconsResolver(),
+			// resolvers: IconsResolver(),
 
 			dts: "./src/components.d.ts",
 		}),
@@ -66,4 +67,22 @@ export default {
 		PkgConfig(),
 		OptimizationPersist(),
 	],
+
+	// 配置 vite 服务设置
+	// server: {
+	// 	host: true, // host设置为true才可以使用network的形式，以ip访问项目
+	// 	port: 8080, // 端口号
+	// 	open: true, // 自动打开浏览器
+	// 	cors: true, // 跨域设置允许
+	// 	strictPort: true, // 如果端口已占用直接退出
+	// 	// 接口代理
+	// 	proxy: {
+	// 		"/api": {
+	// 			// 本地 8000 前端代码的接口 代理到 8888 的服务端口
+	// 			target: "http://localhost:8888/",
+	// 			changeOrigin: true, // 允许跨域
+	// 			rewrite: (path) => path.replace("/api/", "/"),
+	// 		},
+	// 	},
+	// },
 };
