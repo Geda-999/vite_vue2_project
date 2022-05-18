@@ -1,6 +1,6 @@
 # Vue 2 + Vite
 
-> 这是Vue2 + vite + ElementUi + Icons 具体去看package.json
+> 这是Vue2 + vite + ElementUi + Icons + tailwindCss 具体去看package.json
 
 ## 插件
 
