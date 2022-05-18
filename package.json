@@ -17,7 +17,11 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.1.44",
+    "@tailwindcss/postcss7-compat": "^2.2.17",
     "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "unplugin-auto-import": "^0.7.1",
     "unplugin-icons": "^0.14.3",
     "unplugin-vue-components": "^0.19.5",
